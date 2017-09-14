@@ -1,0 +1,12 @@
+Hi {{ recipient.first_name }},
+
+It looks like all of our Mortgage Advisors were busy or away when you stopped by – thanks for leaving a message! One of our Mortgage Advisors will get back to you within one business day.
+
+We’re available to chat online from 8 AM to 6 PM PST Monday-Friday, but our Mortgage Advisors are checking in throughout the day and even outside of business hours to make sure we can respond to your message quickly.
+
+Looking forward to helping you with your mortgage,
+The sample Team
+
+Your Information:
+Name: {{ contact_request.first_name }} {{ contact_request.last_name }}
+Phone: {{ contact_request.phone }}

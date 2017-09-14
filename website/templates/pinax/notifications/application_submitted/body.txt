@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+You have completed all the docs and disclosures and we have sent your application to the bank, expectation of when to hear back.

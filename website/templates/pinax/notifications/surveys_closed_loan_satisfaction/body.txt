@@ -1,0 +1,16 @@
+Hi {{ recipient.first_name }},
+
+We know you’re busy so we’ll keep it short and sweet. We value your feedback and would greatly appreciate if you’d fill out our two-minute customer satisfaction survey:
+
+
+RATE MY EXPERIENCE {{ survey_link }}
+
+
+Thank you,
+
+The sample Team
+
+
+customer.service@sample.com
+1 Union St, Suite 210
+San Francisco, CA, 94111

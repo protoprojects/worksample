@@ -1,0 +1,14 @@
+Hi {{ recipient.first_name }},
+
+Thank you for sending us your information! We couldn’t find you a rate quote online, but one of our Mortgage Advisors will reach out to you in the next business day to look over your responses, get you a rate quote, and discuss your loan options.
+
+Our Mortgage Advisors are here to provide unbiased help and guidance throughout the mortgage process. Ask them anything you want.
+
+We look forward to speaking with you!
+
+Thanks,
+The sample Team
+
+Your Information:
+Name: {{ contact_request.first_name }} {{ contact_request.last_name }}
+Phone: {{ contact_request.phone }}

@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+Yay your conditions and disclosures have been met! Next steps.

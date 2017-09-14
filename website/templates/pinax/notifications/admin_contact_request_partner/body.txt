@@ -1,0 +1,6 @@
+You have a new Partner Lead:
+
+First name: {{ contact_request.first_name }}
+Last name: {{ contact_request.last_name }}
+Email: {{ contact_request.email }}
+Submitted: {{ contact_request.created }}

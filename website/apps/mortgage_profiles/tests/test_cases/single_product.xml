@@ -1,0 +1,54 @@
+<mortech>
+    <header>
+        <errorNum>0</errorNum>
+        <errorDesc>Success</errorDesc>
+    </header>
+    <results index="1" product_id="4" size="219" product_name="Conf 30 Yr  Fixed " lockTerm="45" termType="Fixed">
+        <quote parent_id="5669" vendor_name="Lending Wholesale" vendor_product_name="30 Yr Fixed DU" vendor_product_code="" docType="N/A" creditGrade="" productDesc="Conf 30 Yr  Fixed " productTerm="30 " initialArmTerm="" intOnlyMonths="0" ARMIndex="" pricingStatus="Active" lastUpdate="2016-07-01 09:38:27.0">
+            <quote_detail rate="2.750" price="6.479" originationFee="0" apr="3.307" prepayType="No prepay penalty" indexValue="-1.000" margin="0.000" cap1="2" cap2="2" cap3="5" piti="1654.60" lockURL="" downPayment="0" loanAmount="405300" upfrontFee="0.00" monthlyPremium="0.00">
+                <ratesheet_price>95.021</ratesheet_price>
+                <srp>0.000</srp>
+                <intra_day_adjustment>0.000</intra_day_adjustment>
+                <adjustments total_price_adj="-0.250" total_rate_adj="0.000" total_margin_adj="0.000">
+                    <adjustment_detail desc="LTV &gt; 70 to 75% FNMA FICO 740 and greater " price_adj="-0.250" rate_adj="0.000" margin_adj="0.000" applied="true" />
+                </adjustments>
+                <special_bonuses total_special_bonus_adj="0.000">
+                </special_bonuses>
+                <fees>
+                    <fee_list>
+                        <fee hudline="" description="Admin Fee" feeamount="1095.0" section="Borrower May Not Shop For" paymenttype="Borrower-Paid At Closing" />
+                        <fee hudline="" description="Pre-paid Interest (15 days)" feeamount="458.04" section="Prepaids" paymenttype="Borrower-Paid At Closing" />
+                    </fee_list>
+                </fees>
+            </quote_detail>
+        </quote>
+            <eligibility>
+                <eligibilityCheck>Fail</eligibilityCheck>
+                <comments>Unable to determine product eligibility</comments>
+                <productSummaryLink></productSummaryLink>
+                <productGuidelineLink></productGuidelineLink>
+            </eligibility>
+        <quote parent_id="3174" vendor_name="Stonegate Wholesale(3174)" vendor_product_name="Conforming 30 Year Fixed" vendor_product_code="" docType="N/A" creditGrade="" productDesc="Conf 30 Yr  Fixed " productTerm="30 " initialArmTerm="" intOnlyMonths="0" ARMIndex="" pricingStatus="Active" lastUpdate="2016-07-01 09:00:17.0">
+            <quote_detail rate="2.875" price="2.349" originationFee="0" apr="3.092" prepayType="No prepay penalty" indexValue="-1.000" margin="0.000" cap1="2" cap2="2" cap3="5" piti="1681.56" lockURL="" downPayment="0" loanAmount="405300" upfrontFee="0.00" monthlyPremium="0.00">
+                <ratesheet_price>98.811</ratesheet_price>
+                <srp>-0.060</srp>
+                <intra_day_adjustment>0.000</intra_day_adjustment>
+                <adjustments total_price_adj="0.150" total_rate_adj="0.000" total_margin_adj="0.000">
+                    <adjustment_detail desc="FICO 740 and greater   " price_adj="0.400" rate_adj="0.000" margin_adj="0.000" applied="true" />
+                    <adjustment_detail desc="LTV &gt; 70 to 75% FNMA FICO 740 and greater " price_adj="-0.250" rate_adj="0.000" margin_adj="0.000" applied="true" />
+                </adjustments>
+                <special_bonuses total_special_bonus_adj="0.000">
+                </special_bonuses>
+                <fees>
+                    <fee_list>
+                        <fee hudline="" description="Admin Fee" feeamount="895.0" section="Origination Charges" paymenttype="Borrower-Paid At Closing" />
+                        <fee hudline="" description="Flood Certification" feeamount="10.25" section="Borrower May Not Shop For" paymenttype="Borrower-Paid At Closing" />
+                        <fee hudline="" description="Tax Service Fee" feeamount="77.0" section="Borrower May Not Shop For" paymenttype="Borrower-Paid At Closing" />
+                        <fee hudline="" description="Trust Review Fee" feeamount="100.0" section="Borrower May Not Shop For" paymenttype="Borrower-Paid At Closing" />
+                        <fee hudline="" description="Pre-paid Interest (15 days)" feeamount="478.86" section="Prepaids" paymenttype="Borrower-Paid At Closing" />
+                    </fee_list>
+                </fees>
+            </quote_detail>
+        </quote>
+    </results>
+</mortech>

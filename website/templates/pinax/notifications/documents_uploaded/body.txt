@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+Simple confirmation email that they have uploaded a doc.

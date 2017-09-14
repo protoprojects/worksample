@@ -1,0 +1,25 @@
+{% extends "pinax/notifications/cp_base.html" %}
+
+{% load mortgage_profiles %}
+
+{% block content %}
+<h1>Hi {{ recipient.first_name }},</h1>
+
+<p>Your client, {{ loan_profile.primary_borrower.full_name }}, has recently applied to be pre-qualified for a mortgage loan of {{ loan_profile.current_mortgage_profile.get_loan_amount|currency }} for a home value of {{ loan_profile.current_mortgage_profile.get_property_value|currency }} with a down payment amount of {{ loan_profile.current_mortgage_profile.purchase_down_payment|currency }}.</p>
+<br/>
+<p>{{ loan_profile.primary_borrower.first_name }} requested that we inform you of their pre-qualification. I'm working with {{ loan_profile.primary_borrower.first_name }} to begin the process of getting a fully verified sample Pre-Approval.</p>
+<h3>Now, a little about us:</h3>
+<p>sample is a new mortgage company rebuilding the way your client gets their loan from the ground up. We're committed to providing your clients a straightforward and personalized mortgage experience. We're equally committed to making it easier for you to qualify more clients and close more deals.</p>
+<br/>
+<p>Want to learn more about how we're different? <a href="https://www.sample.com/pros" target="_blank">Check us out</a></p>
+<br/>
+<p>Questions? Feel free to reach out to me directly. I'm here to help {{ loan_profile.primary_borrower.first_name }} find the best loan for them, and am excited to work with you in the process.</p>
+<br/>
+<p style="font-weight:600; color:#575f60">Best,<br/><br/>
+<br/>
+{{ loan_profile.advisor.first_name }} {{ loan_profile.advisor.last_name }}<br/>
+O/F: {{ loan_profile.advisor.phone }} | {{ loan_profile.advisor.email }}<br/>
+<br/>
+Learn more about me <a href="https://sample.com/{{ loan_profile.advisor.profile_key }}" target="_blank">here</a>
+
+{% endblock content %}

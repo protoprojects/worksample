@@ -1,0 +1,10 @@
+{{ recipient.first_name }}, you have a new {{ lead_type }} waiting
+
+First name {{ contact_request.first_name }}
+Last name {{ contact_request.last_name }}
+Email {{ contact_request.email }}
+Phone {{ contact_request.phone }}
+Purchase Type {{ contact_request.purchase_type }}
+Mortgage Timing {{ contact_request.get_mortgage_timing_display }}
+Preferred contact time {{ contact_request.get_preferred_time_display }}
+Created {{ contact_request.created }}

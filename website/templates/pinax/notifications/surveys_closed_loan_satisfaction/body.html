@@ -1,0 +1,10 @@
+{% extends "pinax/notifications/base.html" %}
+
+{% block content %}
+<h1>Hi {{ recipient.first_name }},</h1>
+
+<p>We know you’re busy so we’ll keep it short and sweet.</p> 
+<p>We value your feedback and would greatly appreciate if you’d fill out our two-minute customer satisfaction survey:</p>
+
+<p>RATE MY EXPERIENCE <a href="{{ survey_link }}">link</a></p>
+{% endblock content %}

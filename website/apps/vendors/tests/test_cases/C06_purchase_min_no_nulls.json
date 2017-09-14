@@ -1,0 +1,18 @@
+{
+  "Id": "00617000008aTDDAA2",
+  "Loan_Type__c": "Purchase",
+  "OpportunityContactRoles": {
+    "records": [
+      {
+        "Contact": {
+          "Email": "test@email.com",
+          "FirstName": "MAP",
+          "LastName": "test1"
+        }
+      }
+    ]
+  },
+  "Owner": {
+    "Email": "this must be populated with an Advisor email in the test_case"
+  }
+}

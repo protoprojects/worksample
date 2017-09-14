@@ -1,0 +1,15 @@
+Hello {{ recipient.first_name }},
+
+Thank you for signing up to start a mortgage loan application with us. This is a reminder to verify your email and consent to allow us to review your credit report for the mortgage loan application.
+
+Select 'YES' below to verify your email and provide your consent to obtain your credit report for the mortgage loan application.
+
+If you do not consent or believe this email has been received in error select 'NO' below and we will cancel your account.
+
+YES: {{ verification_url }}
+
+NO: {{ denial_url }}
+
+
+Thanks,
+The sample Team

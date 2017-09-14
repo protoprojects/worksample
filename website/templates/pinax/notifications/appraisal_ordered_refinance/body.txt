@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+Giving them info on how to schedule an appraisal.

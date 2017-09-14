@@ -1,0 +1,3 @@
+
+Hello,
+A loan assigned to you has triggered RESPA and been sent to Encompass.  See loan details here: {{ map_link }}

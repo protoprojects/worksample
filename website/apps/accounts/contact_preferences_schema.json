@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "object",
+  "properties": {
+    "phone_ok": { "id": "phone_ok", "type": "boolean", "default": true},
+    "email_ok": {"id": "email_ok", "type": "boolean", "default": true},
+    "text_ok": {"id": "text_ok", "type": "boolean", "default": true}
+  },
+  "additionalProperties": false,
+  "required": ["phone_ok", "email_ok", "text_ok"]
+}

@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+Borrower {{ borrower.full_name }} has uploaded document {{ document.name }}.

@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+PTF Conditions, what they are, etc.

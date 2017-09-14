@@ -1,0 +1,14 @@
+{% extends "pinax/notifications/base-no-branding.html" %}
+
+{% block content %}
+New lead! Type: {{ lead_type }}.<br/>
+Details:<br/>
+- First name: {{ contact_request.first_name }}<br/>
+- Last name: {{ contact_request.last_name }}<br/>
+- Email: {{ contact_request.email }}<br/>
+- Phone: {{ contact_request.phone }}<br/>
+- Type: {{ contact_request.mortgage_profile_kind }}<br/>
+- Mortgage Timing: {{ contact_request.get_mortgage_timing_display }}<br/>
+- Preferred contact time: {{ contact_request.get_preferred_time_display }}<br/>
+- Created: {{ contact_request.created }}<br/>
+{% endblock content %}

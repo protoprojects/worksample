@@ -1,0 +1,6 @@
+Administrative Notice:
+
+A new user just registered, but we weren't able to get an official advisor assignment.
+
+Following the default policy, the account was assigned to {{ loan_profile.advisor.email }}. They've been notified, but should be on the lookout for loan {{ loan_profile.guid }}. Remember that if they decide to reassign this file, they must reassign the file in Salesforce, the sample Advsior Interface, and Box. If the file has been sent to Encompass, further modifications will be required there. If we were able to sync the lead to the CRM, the lead ID will be {{ loan_profile.crm_id }}.
+

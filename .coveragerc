@@ -1,0 +1,21 @@
+# Control coverage.py
+[run]
+branch = True
+omit = */test*.py
+       */migrations/*
+       */urls.py
+       website/apps/settings/*
+       website/apps/sitecustomize.py
+source = website/apps
+parallel = True
+concurrency = multiprocessing
+
+[xml]
+output = reports/coverage.xml
+
+[report]
+precision = 1
+show_missing = True
+ignore_errors = True
+exclude_lines =
+    raise NotImplementedError

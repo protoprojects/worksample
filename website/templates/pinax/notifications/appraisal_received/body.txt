@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+Appraisal has been received! Appraised value, etc.

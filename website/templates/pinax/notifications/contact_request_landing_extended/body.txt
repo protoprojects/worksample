@@ -1,0 +1,10 @@
+Hi {{ recipient.first_name }},
+
+Thank you for contacting us – we’ve received your message and we’ll get back to you as soon as possible. We’re able to respond to most messages within one business day, but please don’t hesitate to call us if it’s a more time-sensitive matter.
+
+Thanks,
+The sample Team
+
+Your Information:
+Name: {{ contact_request.first_name }} {{ contact_request.last_name }}
+Phone: {{ contact_request.phone }}

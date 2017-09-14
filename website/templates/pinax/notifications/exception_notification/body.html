@@ -1,0 +1,7 @@
+{% extends "pinax/notifications/base.html" %}
+
+{% block content %}
+<p>- STAGE: {{ stage|upper }}</p>
+<p>- GUID: {{ lp_guid }}</p>
+<p>- Error message returned from {{ exception_source }}: {{ exception_msg }}</p>
+{% endblock content %}

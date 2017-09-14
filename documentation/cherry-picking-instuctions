@@ -1,0 +1,15 @@
+## Pre-Cherry-pick
+
+- int-a is on QA
+- build fix in int-b (currently in beta)
+- push fix to int-b as usual
+
+
+
+## The Cherry-pick
+
+- `git checkout int-a`
+- create a new branch `git checkout -b cp-xxxxxx`
+- from the new branch run `git cherry-pick xxxxxxxxxxxxxxxxxxxxxxxxxx` (using the full commit sha)
+- push to new branch `git push origin cp-xxxxxx`
+- on github create the pr making sure to change the base branch to int-a (it will likely be defaulted to int-b)

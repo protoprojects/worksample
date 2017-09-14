@@ -1,0 +1,12 @@
+-r server.txt
+billiard==3.3.0.23
+# celery 4.0.0 depends on billiard > 3.5
+# billiard==3.5.0.2
+django-appconf==1.0.1
+# Ubuntu 16.04 environment requires at least 3.0.30:
+kombu==3.0.36
+# celery 4.0.0 depends on konbu 4.0.0
+# kombu==4.0.0
+locustio==0.7.2
+flower==0.8.2
+newrelic==2.66.0.49

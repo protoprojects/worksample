@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+Your loan and interest rate have been locked - all loan info.

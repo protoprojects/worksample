@@ -1,0 +1,11 @@
+{% extends "pinax/notifications/base-no-branding.html" %}
+
+{% block content %}
+New lead! Type: {{ lead_type }}.<br/>
+Details:<br/>
+- Name: {{ contact_request.first_name }}<br/>
+- Email: {{ contact_request.email }}<br/>
+- Phone: {{ contact_request.phone }}<br/>
+- Message: {{ contact_request.message }}<br/>
+- Created: {{ contact_request.created }}<br/>
+{% endblock content %}

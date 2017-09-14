@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<mortech>
+    <header>
+        <errorNum>-8</errorNum>
+        <errorDesc>State not enabled for customer account</errorDesc>
+    </header>
+</mortech>

@@ -1,0 +1,3 @@
+Hi, {{ recipient.get_full_name|default:"Anonymous" }}.
+You are registered!
+Account number: {{ recipient.account_number }}

@@ -1,0 +1,25 @@
+{% extends "_layout/base.html" %}
+
+{% block navigation %}{% endblock navigation %}
+{% block footer %}{% endblock footer %}
+{% block body_wrapper_tag_attributes %}class="page-404"{% endblock body_wrapper_tag_attributes %}
+{% block content %}
+<nav class="navbar navbar-fixed-top header" role="navigation">
+  <div class="container">
+      <div class="navbar-header text-center" style="width:100%">
+          <a class="navbar-brand logo" href="{% url 'index' %}">sample</a>
+      </div>
+  </div>
+</nav>
+<section class="section-wrapper hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1>Oops! 404!</h1>
+            <p>We couldn't find the page you're looking for — but we can help you find a mortgage.</p>
+            <p>
+                <a href="{% url 'index' %}" class="btn btn-primary cta">Return Home</a>
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock content %}

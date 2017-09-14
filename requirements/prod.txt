@@ -1,0 +1,7 @@
+-r server.txt
+billiard==3.3.0.23
+django-appconf==1.0.1
+# Ubuntu 16.04 environment requires at least 3.0.30:
+kombu==3.0.36
+newrelic==2.66.0.49
+flower==0.8.2

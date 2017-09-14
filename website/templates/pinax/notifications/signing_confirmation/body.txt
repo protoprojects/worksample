@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+Signing time, location, date, option to get reminders (set up in My Mortgage).

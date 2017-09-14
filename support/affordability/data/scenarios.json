@@ -1,0 +1,41 @@
+{
+    "id": 1,
+    "apr": "1.750",
+    "rate": "3.000",
+    "ltv": ".50",
+    "scenarios": [
+        {
+            "id": 23,
+            "name": 1,
+            "monthly_payments": 1200.00,
+            "down_payment": 10000.00,
+            "property_value": 550000.00,
+            "loan_amount": 540000.00,
+            "ratio_used": "dti",
+            "ratio": 1.000,
+            "ratio_percent": 100
+        },
+        {
+            "id": 24,
+            "name": 2,
+            "monthly_payments": 1400.00,
+            "down_payment": 15000.00,
+            "property_value": 550000.00,
+            "loan_amount": 535000.00,
+            "ratio_used": "dti",
+            "ratio": 1.000,
+            "ratio_percent": 100
+        },
+        {
+            "id": 25,
+            "name": 3,
+            "monthly_payments": 1600.00,
+            "down_payment": 20000.00,
+            "property_value": 550000.00,
+            "loan_amount": 530000.00,
+            "ratio_used": "dti",
+            "ratio": 1.000,
+            "ratio_percent": 100
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{% extends "pinax/notifications/base-no-branding.html" %}
+
+{% block content %}
+You have a new Partner Lead:<br/>
+First name: {{ contact_request.first_name }}<br/>
+Last name: {{ contact_request.last_name }}<br/>
+Email: {{ contact_request.email }}<br/>
+Submitted: {{ contact_request.created }}<br/>
+{% endblock content %}

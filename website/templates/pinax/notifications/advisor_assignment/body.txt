@@ -1,0 +1,9 @@
+A newly registered sample user has been assigned to you!
+
+Details:
+- First name {{ loan_profile.primary_borrower.first_name }}
+- Last name {{ loan_profile.primary_borrower.last_name }}
+- Email {{ loan_profile.primary_borrower.email }}
+- Phone {{ loan_profile.primary_borrower.home_phone }}
+- Loan Type {{ loan_profile.kind }}
+- Created {{ loan_profile.created }}

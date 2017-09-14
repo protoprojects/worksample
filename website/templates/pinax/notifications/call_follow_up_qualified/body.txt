@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+Thanks for reaching out to us, we will follow up with you to get things moving.

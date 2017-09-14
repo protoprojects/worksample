@@ -1,0 +1,7 @@
+{% extends "pinax/notifications/base.html" %}
+
+{% block content %}
+  <h1>Hi, {{ recipient.get_full_name|default:"Anonymous" }}.</h1>
+  <p>You are registered!</p>
+  <p>Account number: {{ recipient.account_number }}</p>
+{% endblock content %}

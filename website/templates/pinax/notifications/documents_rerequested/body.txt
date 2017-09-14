@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+Email that says the docs you uploaded/sent are not quite right, info on why, send us another one.

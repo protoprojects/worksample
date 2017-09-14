@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+Thanks for reaching out to us, here's more to do in the meantime while you're still not a qualified lead essentially.

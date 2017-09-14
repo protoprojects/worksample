@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+We've pulled your credit and we still want to give you a loan, yay.

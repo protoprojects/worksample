@@ -1,0 +1,91 @@
+{% extends "pinax/notifications/base-with-team.html" %}
+
+{% load static mortgage_profiles %}
+{% load core_tags %}
+
+{% block title %}Your Mortgage Rate Quote{% endblock title %}
+
+{% block subtitle %}{% endblock subtitle %}
+
+{% block content %}
+<tr>
+  <td>
+    <div style="font-family:Arial, sans-serif, 'Roboto';">
+      <h1>Your Rate Quote</h1>
+      <h2>You chose a <span style="border-bottom: 5px solid #75c076;"><strong>{{ lender.term }} {{ lender.amortization_type|humanize_amortization_type }} Rate</strong></span></h2>
+      <table class="rate" width="100%" style="font-family:Arial, sans-serif, 'Roboto'; font-weight: 300;">
+	<tr>
+	  <td>Rate</td>
+	  <td style="text-align:right;"><strong>{{ lender.rate|floatformat:3 }}%</strong></td>
+	</tr>
+	<tr>
+	  <td>APR*</td>
+	  <td style="text-align:right;"><strong>{{ lender_data.apr|floatformat:3 }}%</strong></td>
+	</tr>
+	<tr>
+	  <td>Total Fees</td>
+	  <td style="text-align:right;"><strong>{{ lender_data.total_fees|currency }}</strong></td>
+	</tr>
+	<tr>
+	  <td>Points</td>
+	  <td style="text-align:right;"><strong>{{ lender_data.points|floatformat:3 }}</strong></td>
+	</tr>
+	<tr>
+	  <td>Monthly Payment</td>
+	  <td style="text-align:right;"><strong>{{ lender.monthly_payment|currency }}</strong></td>
+	</tr>
+	<tr>
+	  <td>Total Monthly Payment</td>
+	  <td style="text-align:right;"><strong>{{ lender_data.total_monthly_payment|currency }}</strong></td>
+	</tr>
+      </table>
+    </div>
+    <div style="padding: 5px; background: #ddd; font-family:Arial, sans-serif, 'Roboto'; font-weight: 300;">
+      <h1 style="margin: 8px;">Your Mortgage Profile</h1>
+      <table class="profile" width="100%">
+	<tr>
+	  <td>Loan Purpose</td>
+	  <td style="text-align:right;"><strong>{{ mortgage_profile.get_mortgage_purpose }}</strong></td>
+	</tr>
+	<tr>
+	  <td>
+	    {% if mortgage_profile.MORTGAGE_PROFILE_KIND == mortgage_profile.PURCHASE %}
+	    Type of Purchase
+	    {% else %}
+	    Property
+	    {% endif %}</td>
+	  <td style="text-align:right;"><strong>{{ mortgage_profile.get_type_of_purchase }}</strong></td>
+	</tr>
+	<tr>
+	  <td>Location</td>
+	  <td style="text-align:right;"><strong>{{ mortgage_profile.get_property_location }}</strong></td>
+	</tr>
+	<tr>
+	  <td>Property Type</td>
+	  <td style="text-align:right;"><strong>{{ mortgage_profile.get_property_type }}</strong></td>
+	</tr>
+	<tr>
+	  <td>Property Value</td>
+	  <td style="text-align:right;"><strong>{{ mortgage_profile.get_property_value|currency }}</strong></td>
+	</tr>
+	<tr>
+	  <td>Mortgage Balance</td>
+	  <td style="text-align:right;"><strong>{{ mortgage_profile.get_loan_amount|currency }}</strong></td>
+	</tr>
+	<tr>
+	  <td>Credit Rating</td>
+	  <td style="text-align:right;"><strong>{{ mortgage_profile.get_credit_rating_display }}</strong></td>
+	</tr>
+	<tr>
+	  <td>Veteran/Spouse of Veteran</td>
+	  <td style="text-align:right;"><strong>{{ mortgage_profile.is_veteran|yesno:'Yes,No' }}</strong></td>
+	</tr>
+      </table>
+    </div>
+    <div style="font-family:Arial, sans-serif, 'Roboto'; font-weight: 300;">
+      <p style="font-family:Arial, sans-serif, 'Roboto'; padding:0 0 22px 0; font-size:15px; font-weight:300; text-align:left; color:#575f60; line-height:1.4;">To better help you understand your mortgage rate, we try to show you numbers as close to reality as we can. However, please note that mortgage rates change often and that these are our best estimates</p>
+      <p style="font-family:Arial, sans-serif, 'Roboto'; font-weight:300;">* Actual APR will vary based on lender and personal circumstances</p>
+    </div>
+  </td>
+</tr>
+{% endblock content %}

@@ -1,0 +1,45 @@
+{{ recipient.email }}, you have a new: {{ lead_type }} waiting
+
+Contact Info:
+First Name: {{ contact_request.first_name }}
+Last Name: {{ contact_request.last_name }}
+Email: {{ contact_request.email }}
+Phone: {{ contact_request.phone }}
+Created: {{ contact_request.created }}
+
+{% if mortgage_profile.kind == mortgage_profile.PURCHASE %}
+Rate quote input data:
+Purchase timing: {{ mortgage_profile.get_purchase_timing_display }}
+Purchase type: {{ mortgage_profile.get_purchase_type_display }}
+Veteran Status: {{ mortgage_profile.is_veteran }}
+Property Value: {{ mortgage_profile.get_property_value }}
+Down Payment: {{ mortgage_profile.purchase_down_payment }}
+Ownership: {{ mortgage_profile.get_ownership_time_display }}
+CreditRating: {{ mortgage_profile.get_credit_rating_display }}
+Purchase Location: {{ mortgage_profile.property_state }}: {{ mortgage_profile.property_county }}
+{% else %}
+Loan: Purpose Refinance
+Refinance Reason: {{ mortgage_profile.get_purpose_display }}
+Cashout: {{ mortgage_profile.cashout_amount }}
+Refi Type: {{ mortgage_profile.get_property_type_display }}
+Veteran Status: {{ mortgage_profile.is_veteran }}
+Refinance PropertyType: {{ mortgage_profile.get_property_type_display }}
+Property Value: {{ mortgage_profile.get_property_value }}
+Mortgage Balance: {{ mortgage_profile.mortgage_owe }}
+Ownership: {{ mortgage_profile.get_ownership_time_display }}
+CreditRating: {{ mortgage_profile.get_credit_rating_display }}
+Purchase Location: {{ mortgage_profile.property_state }}: {{ mortgage_profile.property_county }}
+{% endif %}
+
+Rate Quote output data:
+Lender Name: {{ lender.lender_name }}
+Program Name: {{ lender.program_name }}
+Program Type: {{ lender.program_type }}
+Amortization Type: {{ lender.amortization_type }}
+Term: {{ lender.term }}
+Rate: {{ lender.rate }}
+Points: {{ lender.points }}
+APR: {{ lender.apr }}
+Monthly Payment (Principal & Interest): {{ lender.monthly_payment }}
+Total Fees: {{ lender_calculations.get_total_fees }}
+Total Monthly Payment: {{ lender_calculations.get_total_monthly_payment }}

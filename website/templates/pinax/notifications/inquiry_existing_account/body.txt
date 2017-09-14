@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+Lets them know they have scheduled a consultation, when they should expect to hear, that they can also contact their advisor from my mortgage.

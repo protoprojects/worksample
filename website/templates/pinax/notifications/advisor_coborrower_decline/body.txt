@@ -1,0 +1,5 @@
+A Coborrower declined email verification.
+
+{{ coborrower.first_name }} {{ coborrower.last_name }} declined the email verification step on a loan application assigned to you.
+
+{{ borrower.first_name }} {{ borrower.last_name }} has been notified.

@@ -1,0 +1,20 @@
+{% load static mortgage_profiles %}
+{% load core_tags %}
+
+Hi {{ recipient.first_name }},
+
+Congratulations on getting a rate quote from sample! You have already completed the first step of our simple mortgage process.
+
+You chose a {{ lender.term }} {{ lender.amortization_type|humanize_amortization_type }} Rate Mortgage
+Rate: {{ lender.rate|floatformat:3 }}%
+APR *: {{ lender_data.apr|floatformat:3 }}%
+Total Fees: {{ lender_data.total_fees|currency }}
+Points: {{ lender_data.points|floatformat:3 }}
+Monthly Payment: {{ lender.monthly_payment|currency }}
+Total Monthly Payment: {{ lender_data.total_monthly_payment|currency }}
+
+* Actual APR will vary based on lender and your personal circumstances.
+
+One of our Mortgage Advisors will reach out to you in the next business day to answer any questions, talk about your home buying or refinance goals, and even get you a pre-qualification.
+
+Our Mortgage Advisors are here to offer unbiased help and guidance throughout the mortgage process. Ask them anything you want.

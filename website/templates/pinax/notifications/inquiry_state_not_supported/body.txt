@@ -1,0 +1,10 @@
+Hi {{ recipient.first_name }},
+
+Thank you for sending us your information! We’re not currently licensed to provide mortgage advice or rates for your state, but we’ll make sure to let you know as soon as we are.
+
+Looking forward to helping you with your mortgage,
+The sample Team
+
+Your Information:
+Name: {{ contact_request.first_name }} {{ contact_request.last_name }}
+Phone: {{ contact_request.phone }}

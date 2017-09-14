@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+Reminds them they scheduled a consultation, lets them know advisor tried to contact them and couldn't, prompts them to call us/chat us/let us know a better time/get a rate quote/learn more.

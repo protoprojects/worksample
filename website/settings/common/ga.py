@@ -1,0 +1,3 @@
+# Google Analytics Event Proxy ENABLE, DEBUG, OFF
+GA_PROXY_MODE = 'OFF'
+GA_PROXY_TRACKING_ID = 'UA-44728115-3'

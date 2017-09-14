@@ -1,0 +1,14 @@
+{% extends "admin/change_form.html" %}
+{% load admin_urls %}
+
+{% block object-tools-items %}
+    {% if not original.storage.id and original.lock_owner == 'customer' and original.advisor %}
+        <li>
+            {% url opts|admin_urlname:'create_storage' original.pk|admin_urlquote as create_storage_url %}
+            <a href="{{ create_storage_url }}">
+                <i class="icon-hdd icon-alpha75"></i>Create storage
+            </a>
+        </li>
+    {% endif %}
+    {{ block.super }}
+{% endblock %}

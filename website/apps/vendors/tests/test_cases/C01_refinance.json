@@ -1,0 +1,90 @@
+{
+  "attributes": {
+    "type": "Opportunity",
+    "url": "/services/data/v36.0/sobjects/Opportunity/0067A000002IZzvQAG"
+  },
+  "Cash_Out__c": false,
+  "Coborrower_Email__c": "tcb@example.com",
+  "Coborrower_First_Name__c": "Test",
+  "Coborrower_Last_Name__c": "CoBorrower",
+  "Cash_Out_Amount__c": 20000.00,
+  "Filed_Bankruptcy__c": "Not in Last 7 Years",
+  "Id": "0067A000002IZzvQAG",
+  "Length_of_ownership__c": "Long-term (Over 15 years)",
+  "Loan_Type__c": "Refinance",
+  "Loan_Amount__c": 150000.00,
+  "Property_Address__c": "3 Refinance St",
+  "Property_City__c": "San Francisco",
+  "Property_State__c": "CA",
+  "Property_Use__c": "Primary Home",
+  "Second_Mortgage__c": false,
+  "OwnerId": "0057A000000Ik46QAC",
+  "RecordTypeId": "012G0000001IkW7IAK",
+  "OpportunityContactRoles": {
+    "totalSize": 1,
+    "done": true,
+    "records": [
+      {
+        "attributes": {
+          "type": "OpportunityContactRole",
+          "url": "/services/data/v36.0/sobjects/OpportunityContactRole/00K7A000000N8u0UAC"
+        },
+        "OpportunityId": "0067A000002IZzvQAG",
+        "Id": "00K7A000000N8u0UAC",
+        "ContactId": "0037A000007dweFQAQ",
+        "Contact": {
+          "attributes": {
+            "type": "Contact",
+            "url": "/services/data/v36.0/sobjects/Contact/0037A000007dweFQAQ"
+          },
+          "Age_of_Dependents__c": "3,2,1,0",
+          "Bankruptcy__c": "No",
+          "Birthdate__c": "1990-07-07",
+          "Citizenship__c": "US Citizen",
+          "Dependents__c": "4",
+          "Email": "testgaz@example.com",
+          "FirstName": "Test Lead",
+          "LastName": "One",
+          "MailingAddress": {
+            "city": "San Francisco",
+            "country": "United States",
+            "countryCode": "US",
+            "geocodeAccuracy": null,
+            "latitude": null,
+            "longitude": null,
+            "postalCode": "94111",
+            "state": "California",
+            "stateCode": "CA",
+            "street": "1 Union St.\r\nSte 201"
+          },
+          "Marital_Status__c": "Single",
+          "OtherAddress": {
+            "city": null,
+            "country": "United States",
+            "countryCode": "US",
+            "geocodeAccuracy": null,
+            "latitude": null,
+            "longitude": null,
+            "postalCode": null,
+            "state": null,
+            "stateCode": null,
+            "street": null
+          },
+          "Phone": "(237) 282-9393",
+          "Veteran__c": true,
+          "Years_In_School__c": 14,
+          "Id": "0037A000007dweFQAQ",
+          "RecordTypeId": "012G0000001IkViIAK"
+        }
+      }
+    ]
+  },
+  "Owner": {
+    "attributes": {
+      "type": "User",
+      "url": "/services/data/v36.0/sobjects/User/0057A000000Ik46QAC"
+    },
+    "Email": "this must be populated with an Advisor email in the test_case",
+    "Id": "0057A000000Ik46QAC"
+  }
+}

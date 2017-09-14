@@ -1,0 +1,29 @@
+{% extends "pinax/notifications/base-with-team.html" %}
+
+{% block title %} Thank you for reaching out! {% endblock title %}
+
+{% block content %}
+<tr>
+  <td>
+    <p style="font-weight:600">
+      Hi {{ recipient.first_name }},
+    </p>
+  </td>
+</tr>
+<tr>
+  <td>
+    <p>
+      Thank you for your interest in sample. We’re committed to simplifying the mortgage process and we’re excited to help you achieve your homeownership goals.
+    </p>
+    <p>
+      One of our Mortgage Advisors will reach out to you in the next business day to answer any questions, talk about your home buying or refinance goals, and even get you a rate quote or pre-qualification.
+    </p>
+    <p>
+      Our Mortgage Advisors are here to provide unbiased help and guidance throughout the mortgage process. Ask them anything you want.
+    </p>
+    <p>
+      We look forward to speaking with you!
+    </p>
+  </td>
+</tr>
+{% endblock content %}

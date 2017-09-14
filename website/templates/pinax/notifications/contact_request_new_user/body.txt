@@ -1,0 +1,6 @@
+Hi, {{ recipient.first_name }}.
+We got your {{ contact_request.kind }} contact request.
+Creds for login:
+Account number: {{ recipient.account_number }}
+Login: {{ recipient.email }}
+Password: {{ password }}

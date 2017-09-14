@@ -1,0 +1,6 @@
+Thank you for your response.
+
+We will notify {{ borrower.first_name }} {{ borrower.last_name }} that you declined to be included in this mortgage loan application and we will not obtain your credit report.
+
+Thank you,
+Team sample

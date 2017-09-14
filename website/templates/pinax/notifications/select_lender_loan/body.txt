@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+Gives them all the info on the lender and loan that they've selected.

@@ -1,0 +1,29 @@
+{% extends "pinax/notifications//base-no-branding.html" %}
+
+{% block content %}
+New lead! Type: {{ lead_type }}.<br/>
+Details:<br/>
+- First name: {{ contact_request.first_name }}<br/>
+- Last name: {{ contact_request.last_name }}<br/>
+- Phone: {{ contact_request.phone }}<br/>
+- Email: {{ contact_request.email }}<br/>
+- Type: {{ contact_request.mortgage_profile_kind }}<br/>
+- Property zipcode: {{ contact_request.property_zipcode }}<br/>
+- Property state: {{ contact_request.property_state }}<br/>
+- Property county: {{ contact_request.property_county }}<br/>
+- Is veteran: {{ contact_request.is_veteran }}<br/>
+- Credit rating: {{ contact_request.credit_rating }}<br/>
+- Ownership time: {{ contact_request.ownership_time }}<br/>
+{% if contact_request.mortgage_profile_kind == 'purchase' %}
+- Purchase timing: {{ contact_request.purchase_timing }}<br/>
+- Purchase type: {{ contact_request.purchase_type }}<br/>
+- Purchase property value: {{ contact_request.purchase_property_value }}<br/>
+- Purchase down payment: {{ contact_request.purchase_down_payment }}<br/>
+{% endif %}
+{% if contact_request.mortgage_profile_kind == 'refinance' %}
+- Refinance purpose: {{ contact_request.refinance_purpose }}<br/>
+- Refinance cashout amount: {{ contact_request.refinance_cashout_amount }}<br/>
+- Refinance property value: {{ contact_request.refinance_property_value }}<br/>
+- Refinance mortgage balance: {{ contact_request.refinance_mortgage_balance }}<br/>
+{% endif %}
+{% endblock content %}

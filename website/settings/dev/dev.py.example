@@ -1,0 +1,265 @@
+# pylint: disable=wildcard-import,unused-wildcard-import
+from os.path import abspath
+from celery.schedules import crontab
+from .celery_conf import *
+
+# CELERY TESTING: COMMENT LINES BELOW (and installed app) TO DISABLE
+import djcelery
+djcelery.setup_loader()
+
+from website.settings.common import *
+
+IS_TESTING = len(sys.argv) > 1 and sys.argv[1] == 'test'
+TEST_APPLICATIONS_ENABLED = True
+TEST_RUNNER = 'core.sampletest.sampleTestRunner'
+IS_ANTIVIRUS_ENABLED = True
+ENCOMPASS_TEST_MODE = 'True'
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'sample_dev',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        'ATOMIC_REQUESTS': True
+    }
+}
+
+SECRET_KEY = 'super-secret-local-key'
+
+INSTALLED_APPS += (
+    'debug_toolbar',
+    'rest_framework_docs',
+    'test_without_migrations',
+
+    # Consumer Portal local development
+    # 'corsheaders',
+
+    # TO TEST CELERY IN DJANGO MANAGE.PY
+    # 'djcelery',
+
+    # project test apps
+    'website.apps.money.tests.test_money_app',
+)
+
+# Debug toolbar
+# INTERNAL_IPS = ()
+INTERNAL_IPS = ('127.0.0.1',)
+
+MIDDLEWARE_CLASSES += (
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+
+    # Consumer Portal local development
+    # 'corsheaders.middleware.CorsMiddleware',
+)
+
+# Consumer Portal local development
+# CORS_ORIGIN_WHITELIST = (
+#     'consumer.sample.dev',
+#     'api.sample.dev',
+#     'advisor.sample.dev',
+# )
+# CORS_ALLOW_CREDENTIALS = True
+# CORS_ALLOW_HEADERS = (
+#     'Accept',
+#     'Access-Control-Allow-Headers',
+#     'Authorization',
+#     'Cache-Control',
+#     'Content-Type',
+#     'DNT',
+#     'If-Modified-Since',
+#     'Origin',
+#     'Keep-Alive',
+#     'User-Agent',
+#     'X-Csrftoken',
+#     'X-CustomHeader',
+#     'X-For-Update',
+#     'X-Requested-With',
+# )
+
+DEBUG_TOOLBAR_PANELS = [
+    'debug_toolbar.panels.versions.VersionsPanel',
+    'debug_toolbar.panels.timer.TimerPanel',
+    'debug_toolbar.panels.settings.SettingsPanel',
+    'debug_toolbar.panels.headers.HeadersPanel',
+    'debug_toolbar.panels.request.RequestPanel',
+    'debug_toolbar.panels.sql.SQLPanel',
+    'debug_toolbar.panels.staticfiles.StaticFilesPanel',
+    'debug_toolbar.panels.templates.TemplatesPanel',
+    'debug_toolbar.panels.cache.CachePanel',
+    'debug_toolbar.panels.signals.SignalsPanel',
+    'debug_toolbar.panels.logging.LoggingPanel',
+    'debug_toolbar.panels.redirects.RedirectsPanel',
+]
+
+DEBUG_TOOLBAR_CONFIG = {
+    'INTERCEPT_REDIRECTS': False,
+}
+
+if IS_TESTING:
+    PASSWORD_HASHERS = (
+        'django.contrib.auth.hashers.MD5PasswordHasher',
+    )
+
+EMAIL_BACKEND = "django.core.mail.backends.dummy.EmailBackend"
+
+# See sample README if you wish to test notifications with AWS Simple Email
+# EMAIL_BACKEND = "django_ses.SESBackend"
+# AWS_SES_REGION_NAME = 'us-west-2'
+# AWS_SES_REGION_ENDPOINT = 'email.us-west-2.amazonaws.com'
+
+DEFAULT_FROM_EMAIL = 'sample LOCAL <test@sample.com>'
+
+# Options: 'mortech'
+RATE_QUOTE_SERVICE = 'mortech'
+
+# Mortech
+MORTECH_ENDPOINT = 'http://localhost:5555/mortech_test'
+MORTECH_CUSTOMER_ID = 'NOT-A-CUSTOMER-ID'
+MORTECH_EMAIL = 'faux-mortech@example.com'
+MORTECH_LICENSEKEY = 'NOT-A-LICENSE-KEY'
+MORTECH_THIRDPARTY_NAME = 'FAUX-3RD-PARTY'
+
+# Recaptcha Testing Credentials ONLY
+RECAPTCHA_ENABLED = True
+RECAPTCHA_SITE_KEY = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+RECAPTCHA_SECRET_KEY = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe"
+RECAPTCHA_VERIFICATION_URL = "https://www.google.com/recaptcha/api/siteverify"
+
+STATICFILES_DIRS = (
+    join(PROJECT_PATH, 'static'),
+)
+
+SITE_PATH = 'http://localhost:8000'
+
+ADVISOR_PORTAL_HOST = 'http://localhost:9002'
+
+ENCOMPASS_URL = 'http://encompass-api.qa.sample.com/sample-api-test/api'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'standard': {
+            'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
+        },
+        'simple': {
+            'format': '%(levelname)s %(name)s %(message)s'
+        },
+    },
+    'handlers': {
+        'default': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': join(PROJECT_PATH, 'logs', 'default.log'),
+            'maxBytes': 1024 * 1024 * 10,
+            'backupCount': 50,
+            'formatter': 'standard',
+        },
+        'file_sample': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': join(PROJECT_PATH, 'logs', 'sample.log'),
+            'maxBytes': 1024 * 1024,
+            'backupCount': 50,
+            'formatter': 'standard',
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+    },
+    'loggers': {
+        '': {
+            'handlers': ['default'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'sample': {
+            'handlers': ['file_sample', 'console'],
+            'level': 'DEBUG',
+            'propagate': True,
+        }
+    }
+}
+
+STAGE = "dev"
+
+ADMIN_BASE_LEAD_EMAIL = "myemail@example.com"
+ADMIN_PARTNERS_LEAD_EMAIL = "myemail@example.com"
+
+BOX_API_OAUTH_CLIENT_ID = '''7s01t8zsbuwgi1tse4hs8qdrdm5hdfba'''
+BOX_API_OAUTH_CLIENT_SECRET = '''AZ8guS1Rh6W3gPcZDFhwWpRrdafnMQXM'''
+BOX_API_OAUTH_REDIRECT_URL = '''http://127.0.0.1:8000/callbacks/box/redirect/'''
+BOX_API_OAUTH_REDIRECT_URL_SELF = '''http://127.0.0.1:8000/callbacks/box/redirect/self/'''
+BOX_API_OAUTH_TOKEN_STORE = '/tmp/box.tokens'
+
+TWILIO_ACCOUNT_SID = 'ACXXXXXX'
+TWILIO_AUTH_TOKEN = 'XXXXXXXXX'
+TWILIO_PHONE_NUMBER = '+1XXXXXX'
+
+# Google Analytics Event Proxy ENABLE, DEBUG, OFF
+GA_PROXY_MODE = 'OFF'
+
+REST_FRAMEWORK_DOCS = {
+    'HIDE_DOCS': False
+}
+
+# Avoid log messages during unit tests
+ADVISOR_STORAGE_HOOK_ENABLE = not IS_TESTING
+
+with open(abspath(join(PROJECT_PATH, '../fieldkeys/test_public.key'))) as pubkey:
+    PGPFIELDS_PUBLIC_KEY = pubkey.read()
+with open(abspath(join(PROJECT_PATH, '../fieldkeys/test_private.key'))) as privkey:
+    PGPFIELDS_PRIVATE_KEY = privkey.read()
+
+# Related to Credit Report Requests
+MISMO_SETTINGS['CBC']['ENABLE_CREDIT_REQUEST'] = False
+MISMO_SETTINGS['CBC']['API_LOGIN'] = ''
+MISMO_SETTINGS['CBC']['API_PASSWORD'] = ''
+MISMO_SETTINGS['CBC']['ENABLE_CONSUMER_CREDIT_REQUEST'] = False
+MISMO_SETTINGS['CBC']['CONSUMER_API_LOGIN'] = ''
+MISMO_SETTINGS['CBC']['CONSUMER_API_PASSWORD'] = ''
+
+# Mismo AUS settings: see AUS Credentials last pass share
+AUS_ENVIRONMENT = 'AUS_INTEGRATION'
+MISMO_AUS_SETTINGS['ACCOUNT'] = 'this needs to be set'
+MISMO_AUS_SETTINGS['PASSWORD'] = 'this needs to be set'
+
+SALESFORCE['USER'] = ''
+SALESFORCE['PASSWORD'] = ''
+SALESFORCE['TOKEN'] = ''
+SALESFORCE['URL'] = 'https://test.salesforce.com/services/Soap/u/20.0'
+
+ADVISOR_FALLBACK_NOTIFICATION_EMAIL = 'e2e@beta-portal.sample.com'
+
+CELERYD_TASK_TIME_LIMIT = 300
+CELERYD_MAX_TASKS_PER_CHILD = 12
+IS_TESTING = len(sys.argv) > 1 and sys.argv[1] == 'test'
+TEST_APPLICATIONS_ENABLED = True
+BROKER_URL = 'redis://localhost:6379/0'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+CELERY_ALWAYS_EAGER = True
+CP_RESET_URL = 'http://127.0.0.1:3000/reset-password/'
+
+# Consumer Portal document uploads staged here for virus checking:
+FILE_UPLOAD_TEMP_DIR = '/tmp'
+
+# Default
+CP_URL['PROTOCOL'] = 'http'
+CP_URL['HOST'] = '127.0.0.1:3000'
+# With SSL, per documentation/local-nginx-dev.md
+# CP_URL['PROTOCOL'] = 'https'
+# CP_URL['HOST'] = 'consumer.sample.dev'
+
+SESSION_COOKIE_DOMAIN = None
+CSRF_COOKIE_DOMAIN = None
+SESSION_COOKIE_NAME = 'sample-dev-session-id'
+CSRF_COOKIE_NAME = 'sample-dev-csrftoken'
+
+# Affordability tool
+AFFORDABILITY_ENDPOINT = "http://localhost:4444/affordability"

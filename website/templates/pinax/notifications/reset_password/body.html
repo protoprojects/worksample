@@ -1,0 +1,14 @@
+{% extends "pinax/notifications/base-with-team.html" %}
+
+{% block content %}
+  <tr>
+    <td style="padding:0 0 25px 0; font-size:17px; font-weight:700; text-align:left; color:#575f60;">
+      Hi {{ customer.first_name }},
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:0 0 22px 0; font-size:15px; font-weight:400; text-align:left; color:#575f60; line-height:1.7;">
+      Click here to reset your password: <a href="{{ link }}">link</a>
+    </td>
+  </tr>
+{% endblock content %}

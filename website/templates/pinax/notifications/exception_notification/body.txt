@@ -1,0 +1,3 @@
+- STAGE: {{ stage|upper }}</p>
+- GUID: {{ lp_guid }}
+- Error message returned from {{ exception_source }}: {{ exception_msg }}

@@ -1,0 +1,72 @@
+{
+  "attributes": {
+    "type": "Opportunity",
+    "url": "/services/data/v35.0/sobjects/Opportunity/00617000008aTDDAA2"
+  },
+  "Cash_Out__c": null,
+  "Id": "00617000008aTDDAA2",
+  "Loan_Type__c": "Purchase",
+  "Second_Mortgage__c": false,
+  "Property_State__c": "CA",
+  "OwnerId": "005G00000075btGIAQ",
+  "RecordTypeId": "012G0000001YfDdIAK",
+  "OpportunityContactRoles": {
+    "totalSize": 1,
+    "done": true,
+    "records": [
+      {
+        "attributes": {
+          "type": "OpportunityContactRole",
+          "url": "/services/data/v35.0/sobjects/OpportunityContactRole/00K17000002AB73EAG"
+        },
+        "OpportunityId": "00617000008aTDDAA2",
+        "Id": "00K17000002AB73EAG",
+        "ContactId": "003G000002U8cZ5IAJ",
+        "Contact": {
+          "attributes": {
+            "type": "Contact",
+            "url": "/services/data/v35.0/sobjects/Contact/003G000002U8cZ5IAJ"
+          },
+          "Email": "test@email.com",
+          "FirstName": "MAP",
+          "LastName": "test1",
+          "MailingAddress": {
+            "city": null,
+            "country": "United States",
+            "countryCode": "US",
+            "geocodeAccuracy": null,
+            "latitude": null,
+            "longitude": null,
+            "postalCode": null,
+            "state": null,
+            "stateCode": null,
+            "street": null
+          },
+          "OtherAddress": {
+            "city": null,
+            "country": "United States",
+            "countryCode": "US",
+            "geocodeAccuracy": null,
+            "latitude": null,
+            "longitude": null,
+            "postalCode": null,
+            "state": null,
+            "stateCode": null,
+            "street": null
+          },
+          "Veteran__c": null,
+          "Id": "003G000002U8cZ5IAJ",
+          "RecordTypeId": "012G0000001YfDYIA0"
+        }
+      }
+    ]
+  },
+  "Owner": {
+    "attributes": {
+      "type": "User",
+      "url": "/services/data/v35.0/sobjects/User/005G00000075btGIAQ"
+    },
+    "Email": "this must be populated with an Advisor email in the test_case",
+    "Id": "005G00000075btGIAQ"
+  }
+}

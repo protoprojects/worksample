@@ -1,0 +1,7 @@
+{{ recipient.first_name }}, you have a new {{ lead_type }} waiting
+
+Name {{ contact_request.first_name }}
+Email {{ contact_request.email }}
+Phone {{ contact_request.phone }}
+Message {{ contact_request.message }}
+Created {{ contact_request.created }}

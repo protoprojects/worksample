@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+Giving them info on how the realtor will get the appraisal.

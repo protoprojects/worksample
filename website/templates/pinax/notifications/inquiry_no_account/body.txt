@@ -1,0 +1,12 @@
+Hi {{ recipient.first_name }},
+
+Thank you for your interest in sample. We’re committed to simplifying the mortgage process and we’re excited to help you achieve your homeownership goals.
+
+One of our Mortgage Advisors will reach out to you in the next business day to answer any questions, talk about your home buying or refinance goals, and even get you a rate quote or pre-qualification.
+
+Our Mortgage Advisors are here to provide unbiased help and guidance throughout the mortgage process. Ask them anything you want.
+
+We look forward to speaking with you!
+
+Thanks,
+The sample Team

@@ -1,0 +1,89 @@
+# ===========
+# Pip options
+# ===========
+--no-binary :all:
+
+# =============
+# PyPI packages
+# =============
+bcrypt==1.1.0                   # Outdated: 3.1.2
+beatbox==32.1                   # Sales Force Client
+boto3==1.3.1                    # Outdated: 1.4.4 - AWS S3 Backend
+boxsdk==1.5.3
+celery==3.1.24                  # Celery 4.0 incompatible
+fabric==1.10.2                  # Outdated: 1.13.1 - Deployment tool
+fasteners==0.14.1
+redis==2.10.5
+Hiredis==0.2.0
+html5lib==0.9999999             # new html5lib breaks xhtml2pdf
+jsonschema==2.5.1
+lxml==3.5.0
+mock==2.0.0
+Pillow==3.1.2                   # Slow to build, so correlate with Ubuntu package libjpeg. Required as of 3.0
+pyclamd==0.3.17
+py-moneyed==0.5.0
+PyJWT>=1.0.0,<2.0.0
+pytest==2.9.1
+pytest-xdist==1.14
+python-dateutil==2.4.2
+psycopg2==2.6.1
+raven==5.11.0
+requests-futures==0.9.5
+requests[security]==2.9.1
+six==1.10.0
+tox==2.3.1
+twilio==5.6.0
+xmltodict==0.10.2               # Consider switching lxml
+
+# ===============
+# Django packages
+# ===============
+django==1.10.7
+django-activity-stream==0.6.2
+django-authtools==1.5.0
+django-braces>=1.4.0
+django-cacheops==2.4.5
+django-compressor==2.0
+django-cors-headers==1.1.0
+django-extensions==1.6.7        # 1.4.7 deprecate UUIDField in favor of django 1.8 version
+django-filter==1.0.2
+django-model-utils==2.6.1
+django-redis-cache==1.6.5
+django-ses==0.8.0
+django-shortuuidfield==0.1.3
+django-solo==1.1.2
+django-storages==1.4.1
+django-suit==0.2.23
+django-suit-redactor==0.0.2
+django-ipware==1.1.6
+sorl-thumbnail==12.3            # 12.4a1 ?
+WeasyPrint==0.36
+
+# =====================
+# Django REST Framework
+# =====================
+djangorestframework==3.6.2
+djangorestframework-jwt==1.10.0
+djangorestframework-xml==1.0.1
+drfdocs==0.0.11
+drf-extensions==0.3.1
+
+# ===============================
+# Customizations on sample GitHub
+# ===============================
+# Python packages
+
+# duo_python
+git+https://github.com/sample/duo_python@v1.1#egg=duo-web
+
+# Pinax Notifications
+git+https://github.com/sample/pinax-notifications@v4.0.0#egg=pinax-notifications
+
+# django-encrypted-fields
+git+https://github.com/sample/django-encrypted-fields@1.1.2#egg=django-encrypted-fields
+
+# django-pgcrypto-fields
+git+https://github.com/sample/django-pgcrypto-fields@v0.9.0.python2#egg=django-pgcrypto-fields
+
+# django-postgres-pgpfields
+git+https://github.com/sample/django-postgres-pgpfields@v0.0.4#egg=django-postgres-pgpfields

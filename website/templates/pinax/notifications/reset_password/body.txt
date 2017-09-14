@@ -1,0 +1,2 @@
+Hi {{ customer.first_name }},
+Click here to reset your password: {{ link }}

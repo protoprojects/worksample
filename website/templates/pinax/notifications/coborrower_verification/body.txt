@@ -1,0 +1,14 @@
+Hello, {{ recipient.first_name }}.
+
+Your spouse, {{ borrower.first_name }} {{ borrower.last_name }} has started a mortgage loan application with us and has named you as a co-borrower. This is a reminder to verify your email and consent to allow us to review your credit report for the mortgage loan application
+
+Select the 'YES' link below to verify your email and provide your consent to obtain your credit report for the mortgage loan application
+
+If you believe you received this email in error or do not consent, select the 'NO' link below and we will notify {{ borrower.first_name }} {{ borrower.last_name }}.
+
+YES: {{ verification_url }}
+
+NO: {{ denial_url }}
+
+Thank you,
+Team sample

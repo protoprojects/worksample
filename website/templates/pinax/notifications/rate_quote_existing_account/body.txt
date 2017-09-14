@@ -1,0 +1,16 @@
+Hi, {{ recipient.first_name }}.
+
+Congratulations on getting a rate quote from sample! Your rate quote is attached for your information.
+
+One of our Mortgage Advisors will reach out to you in the next business day to answer any questions, talk about your home buying or refinance goals, and get you a pre-qualification.
+
+Our Mortgage Advisors are here to provide unbiased help and guidance throughout the mortgage process. Ask them anything you want.
+
+
+Thanks,
+The sample Team
+
+customer.service@sample.com
+1.855.sample1 (1.855.746.3361)
+1 Union St. Suite 210
+San Francisco, CA, 94111

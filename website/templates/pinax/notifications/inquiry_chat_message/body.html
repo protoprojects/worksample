@@ -1,0 +1,36 @@
+{% extends "pinax/notifications/base-with-team.html" %}
+
+{% block title %} Thank you for leaving a message! {% endblock title %}
+
+{% block content %}
+  <tr>
+    <td style="padding:0 0 25px 0; font-size:17px; font-weight:700; text-align:left; color:#575f60;">
+      Hi {{ recipient.first_name }},
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:0 0 22px 0; font-size:15px; font-weight:400; text-align:left; color:#575f60; line-height:1.7;">
+      It looks like all of our Mortgage Advisors were busy or away when you stopped by – thanks for leaving a message! One of our Mortgage Advisors will get back to you within one business day.
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:0 0 22px 0; font-size:15px; font-weight:400; text-align:left; color:#575f60; line-height:1.7;">
+      We’re available to chat online from 8 AM to 6 PM PST Monday-Friday, but our Mortgage Advisors are checking in throughout the day and even outside of business hours to make sure we can respond to your message quickly.
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:0 0 22px 0; font-size:15px; font-weight:400; text-align:left; color:#575f60; line-height:1.7;">
+      Your Information:
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:0 0 22px 0; font-size:15px; font-weight:400; text-align:left; color:#575f60; line-height:1.7;">
+      Name: {{ contact_request.first_name }} {{ contact_request.last_name }}
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:0 0 22px 0; font-size:15px; font-weight:400; text-align:left; color:#575f60; line-height:1.7;">
+      Phone: {{ contact_request.phone }}
+    </td>
+  </tr>
+{% endblock content %}

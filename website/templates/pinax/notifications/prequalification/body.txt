@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+You've been prequalified! Info on their buying power, etc.

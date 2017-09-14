@@ -1,0 +1,9 @@
+{% extends "_layout/base.html" %}
+
+{% block content_left %}
+  <form action="." method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn" value="Submit" />
+  </form>
+  <p><a href="{% url 'password_change' %}">Change password</a></p>
+{% endblock %}

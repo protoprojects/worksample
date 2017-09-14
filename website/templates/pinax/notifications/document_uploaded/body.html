@@ -1,0 +1,6 @@
+{% extends "pinax/notifications/base-no-branding.html" %}
+
+{% block content %}
+  <h1>Hi, {{ recipient.first_name }}.</h1>
+  <p>Borrower {{ borrower.full_name }} has uploaded document {{ document.name }}.</p>
+{% endblock content %}

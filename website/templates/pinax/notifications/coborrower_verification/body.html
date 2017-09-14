@@ -1,0 +1,16 @@
+{% extends "pinax/notifications/cp_base.html" %}
+
+{% block content %}
+  <h1>Hello, {{ recipient.first_name }}.</h1>
+  <p>Your spouse, {{ borrower.first_name }} {{ borrower.last_name }} has started a mortgage loan application with us and has named you as a co-borrower. This is a reminder to verify your email and consent to allow us to review your credit report for the mortgage loan application.</p>
+  <p>Select 'YES' below to verify your email and provide your consent to obtain your credit report for the mortgage loan application</p>
+  <p>If you believe you received this email in error or do not consent, select 'NO' below and we will notify {{ borrower.first_name }} {{ borrower.last_name }}.</p>
+  <br/><br/>
+  <p style="text-align: center;"><a class="btn btn-default" style="display: inline-block; margin-bottom: 0; font-weight: 700; text-align: center; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; background-image: none; border: 1px solid transparent; white-space: nowrap; padding: 20px 21px; font-size: 16px; line-height: 1.2; border-radius: 33px; -webkit-user-select: none; text-decoration: none; background-color:#f8485e; color:#ffffff; border: 0; font-family: 'Raleway', sans-serif; min-width: 160px; outline: none !important; padding: 20px 54px; text-transform: uppercase;" href="{{ verification_url }}">YES</a></p>
+  <p style="text-align: center;"><a style="display: inline-block; margin-bottom: 0; font-weight: 700; text-align: center; vertical-align: middle;text-decoration: none; color:#f8485e; border: 0; font-family: 'Raleway', sans-serif;" href="{{ denial_url }}">NO</a></p>
+  <br/><br/>
+  <p>
+    <b>Thank you,</b><br/>
+    <b>Team sample</b>
+  </p>
+{% endblock content %}

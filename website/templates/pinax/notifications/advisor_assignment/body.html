@@ -1,0 +1,14 @@
+{% extends "pinax/notifications/cp_base.html" %}
+
+{% block content %}
+    <h1>A newly registered sample user has been assigned to you!</h1>
+    <h3>Details:</h3>
+    <ul>
+      <li>First name {{ loan_profile.primary_borrower.first_name }}</li>
+      <li>Last name {{ loan_profile.primary_borrower.last_name }}</li>
+      <li>Email {{ loan_profile.primary_borrower.email }}</li>
+      <li>Phone {{ loan_profile.primary_borrower.home_phone }}</li>
+      <li>Loan Type {{ loan_profile.kind }}</li>
+      <li>Created {{ loan_profile.created }}</li>
+    </ul>
+{% endblock content %}

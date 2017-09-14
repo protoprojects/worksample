@@ -1,0 +1,19 @@
+{% extends "admin/login.html" %}
+
+{% block content %}
+
+<form method="POST" id="duo_form">
+{% csrf_token %}
+{% if next %}
+<input type="hidden" name="next" value="{{ next }}"/>
+{% endif %}
+</form>
+
+<script src="{{ duo_js_src }}"></script>
+<script>
+Duo.init({'host':'{{ duo_host }}', 'sig_request':'{{ sig_request }}',
+          'post_action':'{{ post_action }}'});
+</script>
+<iframe height="500" width="620" frameborder="0" id="duo_iframe" />
+
+{% endblock %}

@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+Your loan has been approved by the bank and the clear to close has been received!

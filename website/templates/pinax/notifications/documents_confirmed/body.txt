@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+Confirmation email that the processor has accepted the doc, they've completed that requirement.

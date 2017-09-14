@@ -1,0 +1,16 @@
+{% extends "pinax/notifications/base-with-team.html" %}
+
+{% block title %} Thank you for sending your info! {% endblock title %}
+
+{% block content %}
+  <tr>
+    <td style="padding:0 0 25px 0; font-size:17px; font-weight:700; text-align:left; color:#575f60;">
+      Hi {{ recipient.first_name }},
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:0 0 22px 0; font-size:15px; font-weight:400; text-align:left; color:#575f60; line-height:1.7;">
+      Thank you for your interest in sample! Our partner development team will reach out to you shortly to give you more information about our company and about how we’re partnering with real estate professionals.
+    </td>
+  </tr>
+{% endblock content %}

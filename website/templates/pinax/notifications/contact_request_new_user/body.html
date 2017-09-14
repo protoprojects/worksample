@@ -1,0 +1,12 @@
+{% extends "pinax/notifications/base.html" %}
+
+{% block content %}
+  <h1>Hi, {{ recipient.first_name }}.</h1>
+  <p>We got your {{ contact_request.get_kind_display }} contact request.</p>
+  <p>Creds for login:</p>
+  <ul>
+    <li>Account number: {{ recipient.account_number }}</li>
+    <li>Login: {{ recipient.email }}</li>
+    <li>Password: {{ password }}</li>
+  </ul>
+{% endblock content %}

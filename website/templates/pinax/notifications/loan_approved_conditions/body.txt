@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+You've been approved but we will follow up with conditions.

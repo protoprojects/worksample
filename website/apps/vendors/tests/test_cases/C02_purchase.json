@@ -1,0 +1,189 @@
+{
+  "attributes": {
+    "type": "Opportunity",
+    "url": "/services/data/v36.0/sobjects/Opportunity/0067A000002GYjvQAG"
+  },
+  "Cash_Out__c": false,
+  "Coborrower_Email__c": "tcb@example.com",
+  "Coborrower_First_Name__c": "Test",
+  "Coborrower_Last_Name__c": "CoBorrower",
+  "Down_Payment_Amt__c": 55000.00,
+  "Filed_Bankruptcy__c": "Not in Last 7 Years",
+  "First_Time_Buyer__c": "Yes",
+  "Foreclosure__c": "Yes",
+  "Foreclosure_Years_Removed__c": "7+",
+  "Id": "0067A000002GYjvQAG",
+  "Impound_Escrow__c": "Yes",
+  "Length_of_ownership__c": "Long-term (Over 15 years)",
+  "Loan_Amount__c": 150000.00,
+  "Loan_Type__c": "Purchase",
+  "Property_Address__c": "123 Main St",
+  "Property_City__c": "San Francisco",
+  "Property_County__c": "San Francisco",
+  "Property_State__c": "CA",
+  "Property_type__c": "Single Family Residence",
+  "Property_Use__c": "Primary Home",
+  "Property_Value__c": 550000.00,
+  "Property_Zip_Code__c": "94104",
+  "Purchase_Timing__c": "Not sure/just researching",
+  "Second_Mortgage__c": false,
+  "OwnerId": "0057A000000Ik46QAC",
+  "LeadSource": "Website",
+  "Referred_by__c": "003G000002Ml3qYIAR",
+  "Referred_by_Customer__c": "0037A000007dweFQAQ",
+  "RecordTypeId": "0127A0000004LMBQA2",
+  "OpportunityContactRoles": {
+    "totalSize": 1,
+    "done": true,
+    "records": [
+      {
+        "attributes": {
+          "type": "OpportunityContactRole",
+          "url": "/services/data/v36.0/sobjects/OpportunityContactRole/00K7A000000Mqg5UAC"
+        },
+        "OpportunityId": "0067A000002GYjvQAG",
+        "Id": "00K7A000000Mqg5UAC",
+        "ContactId": "0037A000007dweFQAQ",
+        "Contact": {
+          "attributes": {
+            "type": "Contact",
+            "url": "/services/data/v36.0/sobjects/Contact/0037A000007dweFQAQ"
+          },
+          "Age_of_Dependents__c": "10,12",
+          "Bankruptcy__c": "No",
+          "Birthdate__c": "1990-07-07",
+          "Citizenship__c": "Non Permanent Resident Alien",
+          "Dependents__c": "2",
+          "Email": "blake@example.com",
+          "FirstName": "Test Lead",
+          "LastName": "One",
+          "MailingAddress": {
+            "city": "San Francisco",
+            "country": "United States",
+            "countryCode": "US",
+            "geocodeAccuracy": null,
+            "latitude": null,
+            "longitude": null,
+            "postalCode": "94111",
+            "state": "California",
+            "stateCode": "CA",
+            "street": "1 Union St.\r\nSte 201"
+          },
+          "Marital_Status__c": "Married",
+          "OtherAddress": {
+            "city": "San Rafael",
+            "country": "United States",
+            "countryCode": "US",
+            "geocodeAccuracy": null,
+            "latitude": null,
+            "longitude": null,
+            "postalCode": "94903",
+            "state": "California",
+            "stateCode": "CA",
+            "street": "123 Main St"
+          },
+          "Phone": "(415) 555-1212",
+          "Veteran__c": true,
+          "Years_In_School__c": 14,
+          "Id": "0037A000007dweFQAQ",
+          "RecordTypeId": "012G0000001IkViIAK"
+        }
+      }
+    ]
+  },
+  "Owner": {
+    "attributes": {
+      "type": "User",
+      "url": "/services/data/v36.0/sobjects/User/0057A000000Ik46QAC"
+    },
+    "Email": "tyler.flora@sample.com",
+    "Id": "0057A000000Ik46QAC"
+  },
+  "Referred_by__r": {
+    "attributes": {
+      "type": "Contact",
+      "url": "/services/data/v36.0/sobjects/Contact/003G000002Ml3qYIAR"
+    },
+    "Id": "003G000002Ml3qYIAR",
+    "MailingAddress": {
+      "city": "Los Altos",
+      "country": "United States",
+      "countryCode": "US",
+      "geocodeAccuracy": null,
+      "latitude": null,
+      "longitude": null,
+      "postalCode": null,
+      "state": null,
+      "stateCode": null,
+      "street": null
+    },
+    "OtherAddress": {
+      "city": null,
+      "country": "United States",
+      "countryCode": "US",
+      "geocodeAccuracy": null,
+      "latitude": null,
+      "longitude": null,
+      "postalCode": null,
+      "state": null,
+      "stateCode": null,
+      "street": null
+    },
+    "LastName": "Lociciero",
+    "FirstName": "Marsha",
+    "Email": "marsha@example.com",
+    "Phone": "(650) 391-8337",
+    "Name": "Marsha Lociciero",
+    "AccountId": "001G000001rKT3BIAW",
+    "Company_Address__c": "<br>Los Altos,   <br>United States",
+    "Company_City__c": "Los Altos",
+    "Company_Country__c": "United States",
+    "RecordTypeId": "0127A0000004I6yQAE",
+    "Account": {
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v36.0/sobjects/Account/001G000001rKT3BIAW"
+      },
+      "Name": "Keller Williams Los Altos",
+      "Id": "001G000001rKT3BIAW",
+      "RecordTypeId": "012G0000001I2VHIA0"
+    }
+  },
+  "Referred_by_Customer__r": {
+    "attributes": {
+      "type": "Contact",
+      "url": "/services/data/v36.0/sobjects/Contact/0037A000007dweFQAQ"
+    },
+    "Id": "0037A000007dweFQAQ",
+    "MailingAddress": {
+      "city": "San Francisco",
+      "country": "United States",
+      "countryCode": "US",
+      "geocodeAccuracy": null,
+      "latitude": null,
+      "longitude": null,
+      "postalCode": "94111",
+      "state": "California",
+      "stateCode": "CA",
+      "street": "1 Union St.\r\nSte 201"
+    },
+    "OtherAddress": {
+      "city": "San Rafael",
+      "country": "United States",
+      "countryCode": "US",
+      "geocodeAccuracy": null,
+      "latitude": null,
+      "longitude": null,
+      "postalCode": "94903",
+      "state": "California",
+      "stateCode": "CA",
+      "street": "123 Main St"
+    },
+    "LastName": "One",
+    "FirstName": "Test Lead",
+    "Email": "blake@example.com",
+    "Phone": "(415) 555-1212",
+    "Name": "Test Lead One",
+    "RecordTypeId": "012G0000001IkViIAK"
+  }
+}

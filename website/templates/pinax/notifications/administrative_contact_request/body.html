@@ -1,0 +1,56 @@
+{% extends "pinax/notifications/cp_base.html" %}
+
+{% load mortgage_profiles %}
+
+{% block content %}
+{{ recipient.email }}, you have a new: {{ lead_type }} Submission waiting<br/>
+<br/>
+Contact Info:<br/>
+- First Name: {{ contact_request.first_name }}<br/>
+- Last Name: {{ contact_request.last_name }}<br/>
+- Email: {{ contact_request.email }}<br/>
+- Phone: {{ contact_request.phone }}<br/>
+- Created: {{ contact_request.created }}<br/>
+<br/>
+Rate quote input data:<br/>
+{% if mortgage_profile %}
+  {% if mortgage_profile.kind == mortgage_profile.PURCHASE %}
+  - Loan Purpose: Purchase<br/>
+  - Purchase timing: {{ mortgage_profile.get_purchase_timing_display }}<br/>
+  - Purchase type: {{ mortgage_profile.get_purchase_type_display }}<br/>
+  - Veteran Status: {{ mortgage_profile.is_veteran }}<br/>
+  - Property Value: {{ mortgage_profile.get_property_value|currency }}<br/>
+  - Down Payment: {{ mortgage_profile.purchase_down_payment|currency }}<br/>
+  - Ownership: {{ mortgage_profile.get_ownership_time_display }}<br/>
+  - CreditRating: {{ mortgage_profile.get_credit_rating_display }}<br/>
+  - Purchase Location: {{ mortgage_profile.property_state }}: {{ mortgage_profile.property_county }}<br/>
+  {% else %}
+  - Loan Purpose: Refinance<br/>
+  - Refinance Reason: {{ mortgage_profile.get_purpose_display }}<br/>
+  - Cashout: {{ mortgage_profile.cashout_amount|currency }}<br/>
+  - Refi Type: {{ mortgage_profile.get_property_type_display }}<br/>
+  - Veteran Status: {{ mortgage_profile.is_veteran }}<br/>
+  - Refinance PropertyType: {{ mortgage_profile.get_property_type_display }}<br/>
+  - Property Value: {{ mortgage_profile.get_property_value|currency }}<br/>
+  - Mortgage Balance: {{ mortgage_profile.mortgage_owe|currency }}<br/>
+  - Ownership: {{ mortgage_profile.get_ownership_time_display }}<br/>
+  - CreditRating: {{ mortgage_profile.get_credit_rating_display }}<br/>
+  - Purchase Location: {{ mortgage_profile.property_state }}: {{ mortgage_profile.property_county }}<br/>
+  {% endif %}
+  <br/>
+{% endif %}
+{% if lender %}
+Rate Quote output data:<br/>
+- Lender Name: {{ lender.lender_name }}<br/>
+- Program Name: {{ lender.program_name }}<br/>
+- Program Type: {{ lender.program_type }}<br/>
+- Amortization Type: {{ lender.amortization_type }}<br/>
+- Term: {{ lender.term }}<br/>
+- Rate: {{ lender.rate|floatformat:3 }}%<br/>
+- Points: {{ lender.points|floatformat:3 }}<br/>
+- APR: {{ lender.apr }}<br/>
+- Monthly Payment (Principal & Interest): {{ lender.monthly_payment|currency }}<br/>
+- Total Fees: {{ lender_calculations.get_total_fees|currency }}<br/>
+- Total Monthly Payment: {{ lender_calculations.get_total_monthly_payment|currency }}<br/>
+{% endif %}
+{% endblock content %}

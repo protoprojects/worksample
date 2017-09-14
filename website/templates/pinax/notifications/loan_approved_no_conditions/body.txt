@@ -1,0 +1,2 @@
+Hi, {{ recipient.first_name }}.
+Loan approved!!!
